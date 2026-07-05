@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SAM · Smart Access and Monitoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#1A2E4A;
@@ -20,7 +23,7 @@
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
     color:var(--ink);
     background:var(--paper);
     line-height:1.6;
@@ -126,6 +129,7 @@
   }
   h2{font-size:clamp(26px,3vw,34px); max-width:640px;}
   .lede{font-size:17px; color:#374151; max-width:640px; margin-top:18px;}
+  .example-line{font-style:italic; color:var(--muted); font-size:15px; max-width:640px; margin-top:16px;}
 
   /* not/is */
   .contrast{
@@ -226,7 +230,11 @@
     list-style:none; margin:36px 0 0; padding:0; display:flex; flex-direction:column; gap:14px; max-width:540px;
   }
   .stage-list li{display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--ink);}
+  .stage-list li.future{color:var(--muted);}
   .stage-check{color:var(--teal); font-weight:700; flex-shrink:0;}
+  .stage-check.progress{color:var(--navy);}
+  .stage-check.future{color:var(--faint); font-weight:400;}
+  .stage-note{margin-top:20px; font-size:13px; color:var(--muted);}
 
 
   /* contact */
@@ -301,6 +309,7 @@
     <div class="section-label">What SAM does</div>
     <h2>A decision architecture, not a sensor</h2>
     <p class="lede">Sensors and monitoring devices are already very good at observing and reporting what is happening. SAM sits above them, using the information they already provide to support one justified answer: is it still safe to wait, or has the moment for action arrived?</p>
+    <p class="example-line">For example: someone who has had a fall may not call for help right away. The question is whether that pause is ordinary caution — or something that shouldn't wait.</p>
     <div class="contrast">
       <div class="contrast-card">
         <h3>SAM is not</h3>
@@ -315,8 +324,8 @@
         <h3>SAM is</h3>
         <ul>
           <li>An explainable decision architecture that sits above the systems already in place</li>
-          <li>Designed to help turn existing signals into a justified decision</li>
-          <li>Designed to help reduce unnecessary escalation while supporting timely action when it matters most</li>
+          <li>Built to turn existing signals into a justified decision</li>
+          <li>Created to reduce unnecessary escalation while supporting timely action when it matters most</li>
           <li>Deterministic, explainable and auditable by design, rather than dependent on opaque machine-learning models</li>
         </ul>
       </div>
@@ -333,22 +342,22 @@
       <div class="card">
         <div class="num">01</div>
         <h3>Telecare providers</h3>
-        <p>Designed to add a justified layer of judgement to existing alert pathways.</p>
+        <p>Intended to add a justified layer of judgement to existing alert pathways.</p>
       </div>
       <div class="card">
         <div class="num">02</div>
         <h3>Care providers</h3>
-        <p>Designed to support staff decisions around changes in condition, without adding alert fatigue.</p>
+        <p>Supports staff decisions around changes in condition, without adding alert fatigue.</p>
       </div>
       <div class="card">
         <div class="num">03</div>
         <h3>Housing-with-care</h3>
-        <p>Designed to help residents stay independent for longer, safely.</p>
+        <p>Helps residents stay independent for longer, safely.</p>
       </div>
       <div class="card">
         <div class="num">04</div>
         <h3>Lone-worker firms</h3>
-        <p>Designed to bring the same "is it still safe to wait?" logic to lone-worker safety.</p>
+        <p>Brings the same "is it still safe to wait?" logic to lone-worker safety.</p>
       </div>
       <div class="card">
         <div class="num">05</div>
@@ -366,15 +375,15 @@
     <div class="grid4 why">
       <div>
         <h3>For people</h3>
-        <p>Designed to help people stay independent for longer, without being over-monitored or over-alarmed.</p>
+        <p>Helps people stay independent for longer, without being over-monitored or over-alarmed.</p>
       </div>
       <div>
         <h3>For carers</h3>
-        <p>Designed to provide clearer, better-justified prompts to act when it's genuinely needed.</p>
+        <p>Provides clearer, more considered prompts to act when it's genuinely needed.</p>
       </div>
       <div>
         <h3>For responders</h3>
-        <p>Designed to support better-justified decisions.</p>
+        <p>Supports better-reasoned decisions.</p>
       </div>
       <div>
         <h3>For the wider system</h3>
@@ -397,12 +406,12 @@
       <div class="step-arrow">→</div>
       <div class="step">
         <h3>Assess</h3>
-        <p>SAM is designed to assess whether it is still safe to wait.</p>
+        <p>Assesses whether it is still safe to wait.</p>
       </div>
       <div class="step-arrow">→</div>
       <div class="step">
         <h3>Support decisions</h3>
-        <p>Aims to provide a clear, explainable read for the people who act.</p>
+        <p>Provides a clear, explainable read for the people who act.</p>
       </div>
     </div>
     <div class="note">Full methodology available under NDA to qualifying research and commercial partners.</div>
@@ -416,8 +425,8 @@
     <div class="validation-box">
       <div class="dot"></div>
       <div>
-        <p style="margin:0; font-size:15px; color:#374151;">SAM is currently progressing through independent academic validation in collaboration with university partners. The purpose of this work is to generate independent evidence of how SAM may support safer, better-justified decisions in community care.</p>
-        <div class="trl-line">Currently undergoing independent academic validation (Technology Readiness Level 4 — validated in principle, ahead of real-world piloting).</div>
+        <p style="margin:0; font-size:15px; color:#374151;">SAM is currently progressing through independent academic validation in collaboration with university partners. The purpose of this work is to generate independent evidence of how SAM may support safer, well-reasoned decisions in community care.</p>
+        <div class="trl-line">Currently undergoing independent academic validation (Technology Readiness Level 4 — reflecting early-stage evidence, ahead of real-world evaluation).</div>
       </div>
     </div>
   </div>
@@ -443,9 +452,11 @@
     <h2>Where SAM is right now</h2>
     <ul class="stage-list">
       <li><span class="stage-check">✔</span> Version 1.0 architecture complete</li>
-      <li><span class="stage-check">✔</span> Independent academic collaboration established</li>
-      <li><span class="stage-check">✔</span> NIHR Innovation Catalyst application in preparation</li>
+      <li><span class="stage-check">✔</span> Early exploratory work completed</li>
+      <li><span class="stage-check progress">●</span> Independent academic validation underway</li>
+      <li class="future"><span class="stage-check future">○</span> Real-world evaluation to follow</li>
     </ul>
+    <div class="stage-note">NIHR Innovation Catalyst application in preparation.</div>
   </div>
 </section>
 
@@ -453,7 +464,7 @@
   <div class="wrap">
     <div class="section-label">Working with SAM</div>
     <h2>Three ways to work with us</h2>
-    <p class="lede">We are currently working with partners in three ways.</p>
+    <p class="lede">SAM is intended to be licensed as a white-label decision layer within partners' existing systems, rather than sold directly to individuals. We are currently working with partners in three ways.</p>
     <div class="grid4 why">
       <div>
         <h3>Research</h3>
